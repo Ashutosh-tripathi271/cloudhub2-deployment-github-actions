@@ -20,8 +20,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Log Secrets
-      run: echo "Secrets=$(echo ${{ secrets.NEXUS_USERNAME }}"~?~"${{ secrets.NEXUS_PASSWORD }})"~?~"${{ secrets.CONTD_APP_CLIENT_ID }})"~?~"${{ secrets.CONTD_APP_CLIENT_SECRET }})
     - name: Checkout repository
       uses: actions/checkout@v3
     - name: Build and Deploy with Maven
