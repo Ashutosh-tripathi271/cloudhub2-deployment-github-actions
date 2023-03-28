@@ -2,11 +2,6 @@
 <settings>
   <servers>
     <server>
-      <id>MuleRepository</id>
-      <username>${env.NEXUS_USERNAME}</username>
-      <password>${env.NEXUS_PASSWORD}</password>
-    </server>
-    <server>
       <id>anypoint-exchange-v3</id>
 	  <username>~~~Client~~~</username>
 	  <password>${env.CONTD_APP_CLIENT_ID}~?~${env.CONTD_APP_CLIENT_SECRET}</password>
@@ -15,25 +10,6 @@
   <pluginGroups>
     <pluginGroup>org.mule.tools</pluginGroup>
   </pluginGroups>
-  <profiles>
-    <profile>
-      <id>mule-extra-repos</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <repositories>
-        <repository>
-          <id>mule-public</id>
-          <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <id>mule-public</id>
-          <url>https://repository.mulesoft.org/nexus/content/repositories/public</url>
-        </pluginRepository>
-      </pluginRepositories>
-    </profile>
     <profile>
       <id>Mule</id>
       <activation>

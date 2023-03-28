@@ -7,7 +7,7 @@
 
 	<groupId>319194c1-c2a5-4065-8883-d77cc0b74a31</groupId>
 	<artifactId>cloudhub2-deployment-github-actions-poc</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>cloudhub2-deployment-github-actions-poc</name>
@@ -17,7 +17,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.4.0-20230217</app.runtime>
-		<mule.maven.plugin.version>3.8.0</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.8.1</mule.maven.plugin.version>
 	</properties>
 
 	<build>
