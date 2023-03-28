@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="cb117b12-81b2-4580-b770-5cb69aace2a6" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cloudhub2-deployment-github-actions-pocFlow" doc:id="8df47b3f-bb83-41c1-88f2-d93a12eb7299" >
+		<http:listener doc:name="Listener" doc:id="b8f649c4-fc40-4b72-8c62-07e259d873c0" config-ref="HTTP_Listener_config" path="/demo"/>
+		<set-payload value='#[%dw 2.0&#10;output application/json&#10;---&#10;{&#10;	"message": "Deploying application to cloudhub 2.0 using Github actions CICD pipeline"&#10;}]' doc:name="Initial Payload" doc:id="5ea9077d-dda8-4ce0-8fb5-c53af82c6eed" />
+		<logger level="INFO" doc:name="Log Payload" doc:id="0a4947b7-4eeb-4178-856f-e78b584f670d" message="#[payload]"/>
+	</flow>
+</mule>
