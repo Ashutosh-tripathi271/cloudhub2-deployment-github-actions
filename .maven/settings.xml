@@ -10,6 +10,7 @@
   <pluginGroups>
     <pluginGroup>org.mule.tools</pluginGroup>
   </pluginGroups>
+  <profiles>
     <profile>
       <id>Mule</id>
       <activation>
